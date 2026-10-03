@@ -14,7 +14,7 @@ qtde = st.sidebar.number_input("Quantidade", step=1)
 valor = st.sidebar.number_input("Valor", )
 botao_cadastrar = st.sidebar.button("Cadastrar Venda")
 if botao_cadastrar:
-    if valor == 0 or qtde == 0 or produto == "":
+    if valor <= 0 or qtde <= 0 or produto == "":
         st.warning("Erro no preenchimento!")
     else:
         nova_venda = [str(data), vendedor, produto, qtde, valor]
